@@ -1,10 +1,8 @@
 FROM ubuntu:18.04 
 
 RUN apt-get update 
-RUN apt-get install -y git cmake maven ant software-properties-common openjdk-8-jdk 
 RUN apt-get install -y build-essential 
-RUN apt-get install -y cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev 
-RUN apt-get install -y python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev 
+RUN apt-get install -y git cmake maven ant openjdk-8-jdk libgtk2.0-dev libdc1394-22-dev
 
 RUN git clone git://github.com/opencv/opencv.git 
 WORKDIR /opencv
